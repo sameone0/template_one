@@ -1,0 +1,300 @@
+/* Start Global */
+* {
+    font-family:  'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    width: 100%;
+}
+:root {
+    --main_color: #2c4755;
+}
+
+/* End Global */
+header {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Start Header */
+header {
+    padding: 0 10px;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 70px;
+}
+.head h1 .logo{
+    width: 70px;
+}
+.head nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-top: 30px;
+    
+}
+.head .icon {
+    max-width: 30px;
+    direction: rtl;
+    margin-bottom: 20px;
+}
+.head .icon span {
+    width: 30px;
+    height: 3.5px;
+    background-color: #ccc;
+    display: block;
+    margin-bottom: 3px;
+}
+.head .icon span:nth-child(2) {
+    width: 25px;
+    transition: .3s;
+}
+.head .icon:hover span {
+    width: 30px;
+}
+
+.head nav .slide {
+    position: relative;
+}
+.head nav .slide ul::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-color: transparent transparent #eee transparent;
+    border-style: solid;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+.head nav .slide ul {
+    display: none;
+}
+.head nav .slide ul li{
+    padding: 15px 30px 15px 10px;
+    list-style: none;
+    background-color: #eee;
+    width: 130px;
+    transition: .3s;
+}
+.head nav .slide ul li:hover {
+    background-color: #ddd;
+}
+.head nav .slide ul li:not(:hover) {
+    filter: blur(.7px);
+}
+.head nav:hover .slide ul{
+    display: block;
+}
+.head nav .slide ul li:not(:last-child) {
+    border-bottom: 2px solid #ddd;
+}
+.head nav .slide ul li:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+.head nav .slide ul li a {
+    font-weight: 400;
+    color: #222;
+    text-decoration: none;
+    transition: .3s;
+    padding-right: 70px;
+    padding-left: 5px;
+    padding: 10px 70px 10px 10px;
+}
+.head nav .slide ul li a:hover {
+    padding-left: 20px;
+}
+/* End Header */
+
+/* Start Landing Page */
+.con {
+    background-image: url(../images/pexels-joyston-judah-933054.jpg)  ;
+    background-size: cover;
+    background-position: 0px;
+
+}
+.landing {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    max-width: 350px;
+    margin: auto;
+    padding: 7px;
+}
+.landing h2 {
+    color: #10cab7;
+    margin-bottom: 30px;
+    font-size: 55px;
+    margin-top: 50px;
+}
+.landing p {
+    color: #eee;
+}
+
+/* End Landing Page */
+
+/* Start Skills */
+
+.skills {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    margin: 50px auto;
+}
+.skills div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+    transition: .5s;
+}
+.skills div:hover {
+    box-shadow: 5px 5px 10px #ddd;
+}
+.skills div i img {
+    width: 50px;
+}
+.skills div h3 {
+    color: var(--main_color);
+    font-weight: 800;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.skills div {
+    line-height: 1.8;
+}
+
+/* End Skills */
+
+/* Start Services */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: 50px auto;
+    text-align: center;
+}
+.services .title {
+    text-align: center;
+}
+.services .title h2 {
+    font-size: 150px;
+    color: #eee;
+}
+.services .title p {
+    font-size: 25px;
+    letter-spacing: -1px;
+    margin-top: -50px;
+    color: var(--main_color);
+}
+.services .serv {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin-top: 50px;
+    gap: 20px;
+}
+.services .serv > div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    text-align: start;
+    margin-left: auto;
+    margin-right: auto;
+}
+.services .serv > div div {
+    padding: 0 0 0 50px;
+}
+.services .serv > div div h3 {
+    margin-bottom: 50px;
+}
+.services .serv > div div p {
+    color: var(--main_color);
+    line-height: 1.8;
+}
+
+
+/* End Services */
+
+
+
+
+
+
+
+/* mobile screen */
+@media (max-width: 992px) {
+    header {
+        width: 80%;
+    }
+    .services .title h2 {
+        font-size: 150px;
+    }
+    .services {
+        max-width: 80%;
+    }
+
+}
+@media (max-width: 767px) {
+    header {
+        max-width: 100%;
+    }
+    .skills {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        width: min-content;
+    }
+    .services .title h2 {
+        font-size: 65px;
+        margin-bottom: 25px;
+    }
+    .services .title p {
+        font-size: 20px;
+    }
+    .services {
+        max-width: 100%;
+    }
+}
+@media (max-width: 281px) {
+    header {
+        width: 100%;
+    }
+    .skills {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .services .serv {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .services .title h2 {
+        font-size: 65px;
+        margin-bottom: 25px;
+    }
+    .services .title p {
+        font-size: 20px;
+    }
+    .services {
+        max-width: 100%;
+    }
+    .services .serv > div {
+        max-width: 200px;margin-right: auto;
+    }
+}
+@media only screen and (max-width: 768) {
+    html,
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .services {
+        max-width: 200px;
+    }
+}
