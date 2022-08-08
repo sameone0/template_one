@@ -427,12 +427,15 @@ footer span {
         margin-right: auto;
         width: 100%;
         background-color: white;
+        position: relative;
     }
     header {
         padding: 0 10px;
         width: 100%;
         position: sticky;
         top: 0;
+        z-index: 1111;
+        box-shadow: 0 2px 5px #eee;
         
     }
     .title h2 {
