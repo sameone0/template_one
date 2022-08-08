@@ -10,20 +10,39 @@ body, html {
 }
 :root {
     --main_color: #2c4755;
+    --color: #5de5eb;
 }
-
+.title {
+    text-align: center;
+}
+.title h2 {
+    font-size: 150px;
+    color: #eee;
+}
+.title p {
+    font-size: 25px;
+    letter-spacing: -1px;
+    margin-top: -50px;
+    color: var(--main_color);
+}
 /* End Global */
 header {
-    width: 60%;
+    
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    background-color: white;
 }
 /* Start Header */
 header {
     padding: 0 10px;
+    width: 60%;
+
+    
 }
 .head {
     display: flex;
+    
     justify-content: space-between;
     align-items: flex-start;
     height: 70px;
@@ -72,6 +91,7 @@ header {
     position: absolute;
     top: -20px;
     right: 10px;
+    
 }
 .head nav .slide ul {
     display: none;
@@ -129,7 +149,7 @@ header {
     padding: 7px;
 }
 .landing h2 {
-    color: #10cab7;
+    color: var(--color);
     margin-bottom: 30px;
     font-size: 55px;
     margin-top: 50px;
@@ -146,14 +166,14 @@ header {
     max-width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 20px;
+    gap: 15px;
     margin: 50px auto;
 }
 .skills div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px;
+    padding: 30px;
     align-items: center;
     text-align: center;
     transition: .5s;
@@ -181,39 +201,29 @@ header {
 .services {
     display: flex;
     flex-direction: column;
-    max-width: 60%;
+    max-width: 100%;
     margin: 50px auto;
     text-align: center;
+    max-width: 60%;
+    
 }
-.services .title {
-    text-align: center;
-}
-.services .title h2 {
-    font-size: 150px;
-    color: #eee;
-}
-.services .title p {
-    font-size: 25px;
-    letter-spacing: -1px;
-    margin-top: -50px;
-    color: var(--main_color);
-}
+
 .services .serv {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    margin-top: 50px;
-    gap: 20px;
+    gap: 15px;
+    margin:  50px auto;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(370px, 1fr));
+    grid-template-rows: auto auto;
 }
 .services .serv > div {
-    display: flex;
     justify-content: space-between;
-    max-width: 300px;
     text-align: start;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
+    
 }
 .services .serv > div div {
-    padding: 0 0 0 50px;
+    padding: 0 0 0 40px;
 }
 .services .serv > div div h3 {
     margin-bottom: 50px;
@@ -221,29 +231,226 @@ header {
 .services .serv > div div p {
     color: var(--main_color);
     line-height: 1.8;
+    max-width: 400px;
 }
-
 
 /* End Services */
 
+/* Start Portfolio */
+
+.portfolio {
+    width: 100%;
+    margin: 50px auto;
+    background-color: #eeeeee81;
+    padding: 75px 0;
+}
+.portfolio .cards {
+    display: grid;
+    margin-top: 50px;
+    width: 80%;
+    gap: 20PX;
+    margin: 50px auto;
+    grid-template-columns: repeat(auto-fill , minmax(400px, 1fr));
+}
+.cards .card {
+    width: 90%;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 3px;
+    padding-bottom: 15px;
+    height: 100%;
+    
+}
+.portfolio h2 {
+    color: #ddd;
+}
+
+.cards .card :not(:first-child) {
+    padding: 20px;
+}
+.cards .card .img {
+    width: 100%;
+    height: 60%;
+    background-color: #fff;
+    padding-bottom: 25px;
+    border-radius: 5px 5px 0px 0;
+}
+.cards .card .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0px 0;
+}
+.card h3 {
+    color: var(--main_color);
+    font-weight: 800;
+    
+}
+.card p{
+    line-height: 1.8;
+}
+/* End Portfolio */
+
+/* Start About */
+.about {
+    width: 80%;
+    margin: 50px auto;
+}
+.about-flex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    padding: 55px;
+    position: relative;
+}
+
+.about-flex .p-about hr {
+    width: 35%;
+    border: none;
+    height: 3px;
+    background: var(--color);
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.about-flex .p-about p{
+    max-width: 200px;
+    max-width: 600px;
+    font-size: large;
+    line-height: 1.8;
+}
+.about-flex .p-about p:first-child {
+    color: var(--main_color);
+    font-weight: 600;
+}
+.about-flex  .photo {
+    max-width: 500px;
+    height: fit-content;
+    position: relative;
+    margin-top: 5%;
+    z-index: 1;
+}
+.about-flex  .photo img {
+    max-width: 100%;
+    height: fit-content;
+}
+.about-flex  .photo .chap {
+    width: 25%;
+    height: 110%;
+    background-color: var(--color);
+    position: absolute;
+    z-index: -1;
+    bottom: -5%;
+    left: -50px;
+}
+/* End About */
+
+/* Start Contact */
+.contact {
+    width: 100%;
+    background-color: #eee;
+}
+
+.contact h2 {
+    color: #ddd;
+}
+.contact .cont {
+    width: 80%;
+    display: flex;
+    margin: 25px auto 0 auto;
+    justify-content: flex-start;
+    flex-direction: column;
+    line-height: 1.8;
+
+}
 
 
+.contact .cont > p {
+    color: var(--main_color);
+    font-size: min(3.5rem , 2rem) ;
+    font-weight: 800;
+    margin-top: 50px;
+}
+.contact .cont a {
+    color: var(--color);
+    font-size: min(2.5rem , 1.5rem) ;
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 3%;
+}
+.contact .cont .social {
+    margin-left: 7%;
+    margin-bottom: 50px;
+    color: var(--main_color);
+}
 
+/* End Contact */
 
+/* Start Footer */
+
+footer {
+    background: var(--main_color);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social {
+    display: flex;
+    margin-top: 10px;
+}
+footer p {
+    color: #fff;
+    font-weight: 600;
+}
+
+footer span {
+    color: var(--color);
+}
+
+.span {
+    margin-left: 10px;
+}
+.span span:nth-child(2){
+    margin: 0 15px;
+}
+/* End Footer */
 
 
 /* mobile screen */
 @media (max-width: 992px) {
     header {
-        width: 80%;
+    
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-color: white;
     }
-    .services .title h2 {
+    header {
+        padding: 0 10px;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        
+    }
+    .title h2 {
         font-size: 150px;
     }
     .services {
-        max-width: 80%;
+        max-width: 85%;
     }
-
+    .services .serv {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    .portfolio {
+        width: 100%;
+    }
+    .about {
+        width: 100%;
+        margin: 50px auto;
+    }
 }
 @media (max-width: 767px) {
     header {
@@ -253,15 +460,34 @@ header {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         width: min-content;
     }
-    .services .title h2 {
-        font-size: 65px;
+    .title h2 {
+        font-size: 75px;
         margin-bottom: 25px;
     }
-    .services .title p {
+    .title p {
         font-size: 20px;
     }
     .services {
-        max-width: 100%;
+        max-width: 95%;
+    }
+    .portfolio .cards {
+        grid-template-columns: repeat(auto-fill , minmax(330px, 1fr));
+    }
+    .card {
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 360px) {
+    .cards .card {
+        margin: 0;
+    }
+}
+@media (max-width: 440px) {
+    .skills div {
+        max-width: 280px;
+    }
+    .services .serv {
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     }
 }
 @media (max-width: 281px) {
@@ -269,32 +495,37 @@ header {
         width: 100%;
     }
     .skills {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     .services .serv {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-    .services .title h2 {
-        font-size: 65px;
-        margin-bottom: 25px;
+    .title h2 {
+        font-size: 60px;
+        margin-bottom: 20px;
     }
-    .services .title p {
+    .title p {
         font-size: 20px;
     }
     .services {
-        max-width: 100%;
+        max-width: 95%;
     }
     .services .serv > div {
-        max-width: 200px;margin-right: auto;
+        max-width: 200px;
+        margin-right: auto;
+    }
+    .skills div {
+        max-width: 280px;
     }
 }
-@media only screen and (max-width: 768) {
+/* @media only screen and (max-width: 768) {
     html,
     body{
         width: 100%;
         overflow-x: hidden;
     }
     .services {
-        max-width: 200px;
+        max-width: 95%;
+        
     }
-}
+} */
