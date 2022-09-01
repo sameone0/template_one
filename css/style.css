@@ -7,6 +7,7 @@
 }
 body, html {
     width: 100%;
+    scroll-behavior: smooth;
 }
 :root {
     --main_color: #2c4755;
@@ -479,6 +480,9 @@ footer span {
     .card {
         padding-bottom: 30px;
     }
+    .services .serv > div {
+        display: flex;
+    align-items: flex-start;
 }
 @media (max-width: 360px) {
     .cards .card {
