@@ -221,6 +221,8 @@ header {
     justify-content: space-between;
     text-align: start;
     margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
     
 }
 .services .serv > div div {
@@ -480,10 +482,6 @@ footer span {
     .card {
         padding-bottom: 30px;
     }
-    .services .serv > div {
-        display: flex;
-    align-items: flex-start;
-}
 @media (max-width: 360px) {
     .cards .card {
         margin: 0;
